@@ -1,0 +1,157 @@
+@import 'fonts.css';
+@import 'have.css';
+@import 'get.css';
+@import 'now.css';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  min-width: 360px;
+  box-sizing: inherit;
+  max-width: 1040px;
+  font-family: Open-Sans, sans-serif;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --light-grey: #C0CAD6;
+}
+
+.main {
+  margin-top: 129px;
+  margin-bottom: 128px;
+}
+
+.none {
+  display: none;
+}
+
+.table {
+  margin-bottom: 129px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+}
+
+.title {
+  font-family: Open-Sans-Bold;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 21px;
+  color: var(--black);
+  margin-bottom: 51px;
+  text-transform: uppercase;
+}
+
+.wrapp {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.change {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: var(--white);
+  transform: translateY(48px);
+}
+
+.change__circle {
+  display: none;
+}
+
+
+@media (max-width: 1050px) {
+
+  .main {
+    margin-top: 100px;
+    margin-bottom: 165px;
+  }
+
+  .container {
+    margin: 0 102px;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 47px;
+  }
+
+  .wrapp {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .wrapp::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 45.3%;
+    right: -6px;
+    background-image: url('../img/arrow1024.png');
+    background-size: cover;
+    z-index: 1;
+  }
+
+  .change {
+    transform: translateX(366px);
+  }
+
+  .change__arrow {
+    display: none;
+  }
+
+  .change__circle {
+    display: block;
+  }
+
+}
+
+@media (max-width: 860px) {
+
+  .main {
+    margin-top: 61px;
+    margin-bottom: 108px;
+  }
+
+  .container {
+    margin: 0 22px;
+  }
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 41px;
+  }
+
+  .wrapp::before {
+    width: 80px;
+    height: 80px;
+    transform: translateY(4px);
+  }
+}
